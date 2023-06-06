@@ -14,10 +14,12 @@ function App() {
     dispatch(calculateTotals());
     // eslint-disable-next-line
   }, [cartItems]);
+
   useEffect(() => {
-    dispatch(getCartItems());
+    dispatch(getCartItems('random'));
     // eslint-disable-next-line
   }, []);
+
   if (isLoading) {
     return (
       <div className='loading'>
